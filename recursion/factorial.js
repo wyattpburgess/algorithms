@@ -8,3 +8,4 @@ const factorial = (x) => {
 
 console.log(factorial(3));
 console.log(factorial(10));
+ 
