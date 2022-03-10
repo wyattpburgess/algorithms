@@ -19,7 +19,7 @@ class Queue {
         if (!this.head) {
             this.head = newNode;
             this.length++;
-            return;
+            return this;
         }
         if (!this.tail) {
             // there is no tail, just a head.
@@ -37,7 +37,7 @@ class Queue {
     dequeue() {
         // check length
         if (this.length === 0) {
-            return;
+            return null;
         } else if (this.length === 2) {
             this.tail = null;
         }
