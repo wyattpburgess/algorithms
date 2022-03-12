@@ -18,18 +18,18 @@ const findShortedPath = () => {
         "Phill": 200
     };
     graph["New York"] = {
-        "Buffalo": 1
+        "Buffalo": 100
     };
     graph["Philly"] = {
-        "New York": 3,
-        "Buffalo": 5
+        "New York": 300,
+        "Buffalo": 500
     }
     graph["Buffalo"] = {};
 
     const infinity = Math.pow(10, 1000);
     const costs = {
-        "New York": 6,
-        "Philly": 2,
+        "New York": 600,
+        "Philly": 200,
         "Buffalo": infinity
     };
 
@@ -75,9 +75,9 @@ const findShortedPath = () => {
 findShortedPath();
 
 //          NEW YORK
-//        /6   |    \1
-// DC          | 3     BUFFALO
-//        \2   |    /5
+//        /600 |    \100
+// DC          | 300   BUFFALO
+//        \200 |    /500
 //           PHILLY
 
 
