@@ -1,4 +1,4 @@
-// Finds "best station" using greedy/appx. algorithm.
+// Finds "best set of stations" using greedy/appx. algorithm.
 const findLocationForStations = (statesToCover, stations) => {
     const finalStations = new Set();
 
