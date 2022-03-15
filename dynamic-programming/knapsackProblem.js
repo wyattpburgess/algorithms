@@ -49,7 +49,22 @@ const maximizeValue = (items, maxWeight) => {
             }
         }
     }
+
+    let weightComparison = maxWeight;
+    const selectedItems = [];
+    // finds items that were added.
+    for (let i = maxValues.length - 1; i >= 0; i--) {
+        // default to 0 for first row - 1;
+        const valueAbove = maxValues[i-1] === undefined ? 0 : maxValues[i-1][weightComparison]
+        if (maxValues[i][weightComparison] !== valueAbove) {
+            selectedItems.push(i);
+            weightComparison -= items[i][0];
+        }
+    }
+
+    // 0, 2, 4
     console.log(maxValues);
+    console.log(selectedItems);
     return maxSolution;
 }
 
@@ -64,5 +79,5 @@ const items = [
 
 const maxWeight = 6;
 
-const maximizeItems = maximizeValue(items, maxWeight);
-console.log(maximizeItems);
+const maximizedValueWithItems = maximizeValue(items, maxWeight);
+console.log(maximizedValueWithItems);
