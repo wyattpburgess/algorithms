@@ -65,6 +65,10 @@ class PriorityQueue {
         const topItem = this.items[0];
         const lastItem = this.items[this.items.length - 1];
         // remove item from end
+        if (this.items.length === 1) {
+            this.items = [];
+            return topItem;
+        }
         this.items.pop();
         // add item to top and bubble down
         this.items[0] = lastItem;
