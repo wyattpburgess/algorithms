@@ -11,7 +11,7 @@ function shortestWayToFormString(strA, strB) {
     const positionsInStrA = charPositions[strB[i]];
     if (!positionsInStrA) return -1;
     const nextIndex = getNextIndex(prevIndex, positionsInStrA);
-    if (nextIndex < prevIndex) {
+    if (nextIndex <= prevIndex) {
       rounds++;
     }
     prevIndex = nextIndex;
@@ -49,7 +49,9 @@ const test1 = shortestWayToFormString("aabcca", "aaabcac");
 const test2 = shortestWayToFormString("cabab", "bacab");
 const test3 = shortestWayToFormString("aaa", "a");
 const test4 = shortestWayToFormString("aaa", "ab");
+const test5 = shortestWayToFormString("babcdswmxcA935dVvnev2", "aaaaaa");
 console.log(`${test1} should be 3`);
 console.log(`${test2} should be 2`);
 console.log(`${test3} should be 1`);
 console.log(`${test4} should be -1`);
+console.log(`${test5} should be 6`);
